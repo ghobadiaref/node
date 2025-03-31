@@ -1,0 +1,7 @@
+FROM node:7 
+ADD app.js /app/app.js 
+WORKDIR /app
+VOLUME ["/data"]
+USER 1001:1001
+EXPOSE 8080
+ENTRYPOINT ["node", "app.js"]
